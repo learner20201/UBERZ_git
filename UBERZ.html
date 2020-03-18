@@ -1,24 +1,23 @@
 <html>
     <head>
         <title>Zuber</title>
-            <link href='https://fonts.googleapis.com/css?family=Lato:100,250,275,300,700,750,900,800,500,600' rel='stylesheet'>
-            <Style type="text/css">
-                #big{
-                    width:1250px;
-                }
-                #navigation{
-                    background-color:#292e37;
-                    height:90.5px;
-                    position:fixed;
-                    top:0;
-                    width:100%;
-                    z-index:200;
-                    
-                }
+            <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700' rel='stylesheet'>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                var offset=$("#one").offset().top; 
+                $(window).scroll(function(){
+                $(window).scrollTop() >= offset ? $("nav").addClass("addNavigationBackground") : $("nav").removeClass("addNavigationBackground")
+                })
+                });
+            </script>
+            <style type="text/css">
                 body{
                     margin:0;
                     padding:0;
-                    font-family: 'Lato';font-size: 22px;font-weight:300;   
+                    font-family: 'Lato';font-size: 22px;  
                 }
                 #logo{
                     height:47px;
@@ -26,6 +25,16 @@
                     position:relative;
                     top:20px;
                     left:20px;
+                }
+                #navigation{
+                    height:90.5px;
+                    position:fixed;
+                    top:0;
+                    width:100%;
+                    z-index:200;
+                }
+                .addNavigationBackground{
+                     background-color:#292e37;
                 }
                 a{
                     text-decoration: none;
@@ -40,33 +49,77 @@
                     display:inline;
                     padding-right: 5px;
                     padding-left: 21.7px;
-                }
+                }                                                                                                       
                 #barRight{
                     padding-right:60.7px;
                     font-size:16px;
+                    font-weight:300;
                     position:relative;
                     bottom:49.3px;
+                }                                                                                           
+                #main{
+                    padding-top:0%;
+                    color:white;
+                    font-size:60px;
+                    width:100%;
+                }
+                #MainSlogan{
+                    font-weight:300;
+                    font-size:45px;
+                }
+                .LearnMoreButtons{
+                    color:white;
+                    font-size:24px;
+                    font-weight:300;
+                    border:0.25px solid white;
+                    margin-right:0.25%;
+                    padding:4px;
+                    padding-left:20px;
+                    padding-right:20px;
+                    
+                }
+                #Buttons{
+                    width:50%;
+                    position:absolute;
+                    left:25%;
+                    top:33%;
+                }
+                .down {
+                  border: solid bisque;
+                  position:absolute;
+                  bottom:3.75%; 
+                  left:49%;    
+                  border-width: 0px 5px 5px 0;
+                  padding: 10px;
+                  transform: rotate(45deg);
+                  -webkit-transform: rotate(45deg);  
+                }
+                CityView a.hover-active{
+                    color:blue;
                 }
                 #one{
                     margin-bottom:69.75px; 
                 }
-                #twoo{
+                .container{
                     overflow:hidden;
                 }
                 #opening{
                     font-size: 50px;
+                    font-weight:300;
                     color: #4e4d4d;
-                    padding-top: 147px;
                     text-align:center; 
-                    padding-top:190px;
+                    padding-top:1%;
+                    margin-bottom:2%;
                 }
                 .borderBottom{
                     border-bottom: 2px solid #D3D3D3;
-                    width:4.75%;
+                    width:4.5%;
                     margin:auto;
+                    padding-top:0%;
                 }
                 #phone{
-                    width:40.9%;
+                    width:39%;
+                    padding-right:2%;
                 }
                 .Numbers{
                     border-top:1px solid #D7D7D7;
@@ -77,14 +130,14 @@
                     padding-bottom:21.5px;
                     padding-left:28px; 
                     padding-right:28px; 
-                    border-radius:50%;
-                    float:left; 
+                    border-radius:50%; 
                     color:#6A6969;
                     font-size:20px;
+                    font-weight:300;
+                    margin-top:-20px;
                 }
                 .ooft{
-                    width:49%;
-                    float:left;
+                    width:50%;
                     text-align:right;
                 }
                 .toft{
@@ -108,11 +161,13 @@
                 }
                 .details{
                     font-size:16px;
+                    font-weight:300;
                     position:relative;
                     left:5px;
                     top:0px;
                     padding-top: 0px;
                     margin:0 auto;
+                    color:#4E4D4D;
                 }
                 .steps{
                     position:relative;
@@ -125,11 +180,14 @@
                     font-weight:600;
                     color:#4E4D4D;
                 }
+                #steps{
+                    
+                }
                 .Content{
                     float:left;
                     width:64%;
                     Position:relative;
-                    top:17px;
+                    top:-5%;
                     left:14px;  
                 }
 
@@ -139,9 +197,11 @@
                 }
                 .BenefitsTitle{
                     padding-top:25px;
+                    margin-bottom:30px;
                     text-align:center;
                     font-size:50px;
                     color:#4E4D4D;
+                    font-weight:300;
                 }
                 .BenefitsHeader{
                     color:#11939a;
@@ -150,7 +210,7 @@
                 }
                 .TypesOfBenefits{
                     text-align:center;
-                    margin-top:95px;
+                    margin-top:80px;
                 }
                 .TypesOfBenefitsOne{
                     margin-left:25%; 
@@ -193,7 +253,7 @@
                     width:78.0%;
                 }
                 #ImageLock{
-                    width:7%;
+                    width:8%;
                 }
                 .BenefitsText{
                     font-weight:300;
@@ -221,20 +281,28 @@
                 #SignUp{
                     background-color:#FF9F37;
                     color: white;
-                    padding-top:25px;
-                    padding-bottom:25px;
-                    padding-left:25px;
-                    padding-right:25px;
+                    font-size: 16px;
+                    font-weight:bold;
+                    padding:25px;
+                    padding-left:50px;
+                    padding-right:50px;    
                     margin-top:20px;
-                    /*font-weight:300;*/
-                    font-size:20px;
                 }
                 .PricingHeader{
                     color:#549dc5;
                     font-weight:700;
-                    font-size:30px;
+                    font-size:35px;
+                    margin-top:0px;
+                    padding-top:0px;
+                    border-bottom:0.25px solid lightgray;
                 }
-                #People{
+                .PriceHeader{
+                    font-weight:500;
+                    font-size:20px;  
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                }
+                #team{
                     width:100%
                     margin-bottom:20px;    
                 }
@@ -253,14 +321,16 @@
                 #SignUpPrice{
                     background-color:#468eb5;
                     color: white;
-                    padding-top:5px;
-                    padding-bottom:5px;
-                    padding-left:5px;
-                    padding-right:5px;
-                    margin-top:0px;
-                    font-size:10px;
+                    padding-top:10px;
+                    padding-bottom:10px;
+                    padding-left:30px;
+                    padding-right:30px;
+                    margin-top:20px;
+                    margin-bottom:20px;
+                    font-size:20px;
+                    font-weight:400;
                     list-style: inside;
-                     display: inline-block;
+                    display: inline-block;
                 }
                 .PriceRuling{
                     width:70%;
@@ -268,35 +338,34 @@
                 .price{
                     list-style-type:none;
                     box-sizing:border-box;
-                    padding-right: 10%;
-                    padding-left: 10%;
+                    padding-right: 13%;
+                    padding-left: 13%;
+                    padding-top:4%;
                     font-size:17.5px;
-                    width:60%;
+                    width:63%;
                     border:0.25px solid lightgrey;
+                    color:#4E4D4D;
                 }
                 #ulshift1{
                     position:relative;
-                    left:40%;
+                    left:37%;
                 }
                 #ulshift2{
                     position:relative;
-                    left: 20%;
+                    left: 18.5%;
                 }
                 .widthHundred{
                     width:100%;
                 }
                 .Social{
                     margin-bottom:63px;
+                    height:5%;
                 }
                 .OneSplitThree{
-                    /*width:29.2%;*/
                     width:33%;
-                   
                 }
                 .TwoSplitThree{
-                    /*width:28.6%;*/
                     width:33%;
-                    
                 }
                 .noPadding{
                     padding-bottom: 0;
@@ -307,39 +376,260 @@
                     padding-top: 14px;
                     padding-bottom:14px;
                 }
-            </Style>
+                .twentyFont{
+                    font-size:20px;
+                    font-weight:300;
+                }
+                #Pricing{
+                    padding-bottom:2%;
+                }
+                #Driving{
+                    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Images/driving1.jpg");
+                    background-size:cover;
+                    background-position:center; 
+                    background-attachment: scroll;
+                    
+                }
+                #CityNight{
+                    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Images/city2.jpg");
+                    background-size:cover;
+                    background-position:center; 
+                    background-attachment: fixed;
+                    height:50vh;
+                }
+                #CityView{
+                    background-image:linear-gradient(rgba(8,0,0,0.65),rgba(0,0,0,0.65)), url("Images/city1.jpg");
+                    background-size:cover;
+                    background-position:center; 
+                    background-attachment: fixed;
+                    height:100vh;
+                }
+                #Overlapping{
+                    background-image: url("Images/pattern-bg.png");
+                    background-repeat:repeat;
+                    background-position:left top;
+                    height:100%;
+                }
+                #RequestForm{
+                    font-size:50px;
+                    color:white;
+                    font-weight:300;
+                    margin-bottom: 30px;
+                    margin-top:0px;
+                    padding-top:50px;
+                }
+                #BorderBottomRequest{
+                    border-bottom: 2px solid #D3D3D3;
+                    width:7%;
+                    margin-left: auto;
+                    margin-right:auto;
+                    margin-bottom: 6%;
+                }
+                .displayInline{
+                    display:inline;
+                }
+                .displayInlineBlock{
+                     display: inline-block;
+                }
+                .displayBlock{
+                    display: block;
+                }
+                .displayTable{
+                    display:table
+                }
+                #Submit{
+                    color:white;
+                    background-color:#549dc5;
+                    padding:10px;
+                    padding-left:27px;
+                    padding-right:27px;
+                    font-size:19px;
+                    margin-right:54%;
+                    border:0px; 
+                    margin-bottom:10%;
+                }
+                
+                .textbox{
+                    height:4%;
+                    width:78%;
+                    margin-bottom:4.5%;
+                }
+                .Labels{
+                    color:white;
+                    font-size:16px;
+                    font-weight:300;
+                    padding-right:20px;
+                    padding-bottom:10%;
+                }
+                #BottomBarTop{
+                    width:100%;
+                    padding-top:2%;
+                }
+                #BottomBarLinks{
+                    width:29%;
+                }
+                #BottomBar{
+                    background-color:#292e37;
+                    height:17%;
+                }
+                #BottomBarLeft{
+                    padding-left:10.25%;
+                    font-size:16px;
+                    font-weight:300;
+                    width:59%;
+                    
+                }
+                #BottomBarLeft ul{
+                    list-style-type:none;
+                    float:left;
+                }
+                #BottomBarLeft ul li{
+                    display:inline;
+                    padding-left: 15px;
+                    padding-right: 21.7px;
+                }
+                #Copyright{
+                    color:lightgray;
+                    font-weight:300;
+                    font-size:16px;
+                }
+                .fa {
+                    font-size: 16px;
+                    width: 10px;
+                    text-align: center;
+                    padding-top:5%;
+                    }
+                .fa-facebook {
+                    color: white;
+                    float:left;
+                    padding-left:15%;
+                }
+                .fa-twitter {
+                    color: white;
+                    float:left;
+                    padding-left:10%;
+                }
+                .fa-linkedin {
+                    color:#FFFFFF;
+                    float:left;
+                    padding-left:12.5%;
+                }
+                .fa-google-plus{
+                    color: #FFFFFF;
+                    float:left;
+                    padding-left:10%;
+                }
+                #LearnMore:hover,active{
+                    background-color: #24e098;
+                }
+                #RideNow:hover,active{
+                    background-color: #24e098;
+                }
+                .OtherBenefits{
+                    color:white;
+                    font-size:390%;
+                    /*font-size:85px;*/
+                    font-weight:700;
+                    padding-top:3%;
+                }
+                .OtherBenefitsFooter{
+                    color:white; 
+                    font-size:29.5%;
+                    font-weight:300;
+                }
+                #CarsAvailable{
+                    margin-left:15.5%;
+                }
+                #AwardsWon{
+                    margin-left:12.5%;
+                    
+                }
+                #Miles{
+                    margin-right:9.5%;
+                }
+                #AmtOfRides{
+                    margin-right:15.5%;
+                }
+                .OtherBenefitsImages{
+                    color:#468eb5;
+                    /*font-size:50px;*/
+                    font-size:60%;
+                    margin-right:30%;
+                }
+                .OtherBenefitsDivision{
+                    
+                }
+                .addBorder{
+                    border:0.25px solid yellow;
+                }
+                #mediaBorder{
+                    border-bottom:1.5px solid #D3D3D3;
+                    padding-top:1.5%;
+                    width:75%;
+                    margin:auto;
+                }
+                .driveSplitOne{
+                    width:36.5%;
+                    float:left;
+                }
+                .driveSplitTwo{
+                    width:33.5%;
+                    float:left;
+                    
+                }
+                .driveSplitThree{
+                    width:30%;
+                    float:left;
+                }
+                .driveSplitIntoThree{
+                    width:100%;
+                }
+                .fullWidth{
+                    width:100%;
+                }
+                .requestRide{
+                    padding-bottom: 10%;
+                }
+                .verticalAlign{
+                    vertical-align: center;
+                }
+            </style>
     </head>
     <body>
-        
-        <img id="big" src="Images/big.png">
-        <div id="navigation">
+        <div id="CityView">
+            <div id="Overlapping" class="verticalAlign">
+                <div id = "Buttons" class="addBorder">
+                    <p id="main" class="floatLeft displayInlineBlock">Transportation at a moment's notice<br><span id="MainSlogan">Friends. Family. Go.</span>    
+                    <h3><a href="#one" id="LearnMoreMargin" class="LearnMoreButtons">Learn More</a>
+                    <a href="#RequestForm" class="LearnMoreButtons">Ride Now</a></h3>
+                </div>
+                <i class="down"></i>
+            </div>
+        </div>
+        <nav id="navigation">
             <img id="logo" src="Images/uberz-logo.png">
             <div id="barRight">
-             <ul>   
-                 <li><a href="#steps">How it works</a></li>
-                 <li><a href="#benefits">Benefits</a></li>
-                 <li><a href="#pricing">Pricing</a></li>
-                 <li><a href="#team">Team</a></li>
-                 <li><a href="#request">Request</a></li>  
-              </ul>   
+                 <ul>   
+                     <li><a href="#one">How it works</a></li>
+                     <li><a href="#Benefits">Benefits</a></li>
+                     <li><a href="#Pricing">Pricing</a></li>
+                     <li><a href="#team">Team</a></li>
+                     <li><a href="#RequestForm">Request</a></li>  
+                  </ul>  
             </div>    
-        </div>
-        
-        
-        <div id="one" class="container">
-            <p id="opening">We make it easy to find a ride anytime</p>
+        </nav>
+        <div id="one">
+            <p id="opening" class="addBorder">We make it easy to find a ride anytime</p>
             <div class="borderBottom"></div>   
-        </div>
-        
-                 
-        <div id="twoo" class="container"> 
-            <div class="ooft">
+        </div>         
+        <div class="container"> 
+            <div class="ooft floatLeft">
                 <img id="phone" src="Images/iphone-demo.png">
             </div>
             <div class="toft">
                 <div class="twoowt">   
                     <div class="directions">
-                        <p class="Numbers">1</p>
+                        <p class="Numbers floatLeft">1</p>
                         <div class="Content">
                             <h2 class="steps">Tell us where</h2>
                             <p class="details">Start by telling us where you would like to go. It's easy. Just log into the app and type in the address of your destination.</p>
@@ -347,7 +637,7 @@
                     </div>
                     <br>
                     <div class="directions">
-                        <p class="Numbers">2</p>
+                        <p class="Numbers floatLeft">2</p>
                         <div class="Content">
                             <h3 class="steps">Request a ride</h3>
                             <p class="details">After you tell us where you want to go, just hit submit and your request will be processed immediately.   </p>
@@ -355,7 +645,7 @@
                     </div>
                     <br>
                     <div class="directions">
-                        <p class="Numbers">3</p>
+                        <p class="Numbers floatLeft">3</p>
                         <div class="Content">
                             <h3 class="steps">Enjoy</h3>
                             <p class="details">The last step is the most important one. Enjoy the stress-free ride to your destination.</p>
@@ -364,11 +654,8 @@
                 </div>        
             </div>   
         </div>
-        
         <br><br><br>
-        
-        
-        <div class="Benefits">
+        <div class="Benefits" id="Benefits">
             <p class="BenefitsTitle">Benefits</p>
             <div class="borderbottom"></div>
             <div class="threeSplitOne textAlignCenter floatLeft">
@@ -419,60 +706,110 @@
             <br><br>
             <div class="Media">
                 <img src="Images/media.png">
+                <div id="mediaBorder"></div>
                 <p class="BenefitsHeader" id="help">Need help? Real people will answer your call right away.</p>
                 <p class="BenefitsText" id="Hotline">Call (800) 456-4567 or email <a class="email" href="mailto:bookings@uberz.com">bookings@uberz.com</a></p>
                 <br>
                 <a id="SignUp" href="#">SIGN UP NOW FOR UBERZ</a>
                 <br>
-                
             </div> 
         </div>
-        <br>
-        
-        <div class="Benefits">
+        <div id="CityNight">
+                <div class="OtherBenefitsDivision">
+                    
+                    <p class="OtherBenefits floatLeft textAlignCenter" id="CarsAvailable">
+                        <i class="fa fa-car OtherBenefitsImages textAlignCenter"></i>
+                        <br>
+                        345
+                        <br>
+                        <span class="OtherBenefitsFooter">
+                            Cars Available
+                        </span>
+                    </p>
+                </div>
+                <div class="OtherBenefitsDivision">
+                    
+                    <p class="OtherBenefits floatLeft textAlignCenter" id="AwardsWon">
+                        <i class="fa fa-trophy OtherBenefitsImages textAlignCenter"></i>
+                        <br>
+                        16
+                        <br>
+                        <span class="OtherBenefitsFooter">
+                            Awards Won
+                        </span>
+                    </p>
+                </div>
+                <div class="OtherBenefitsDivision">
+                    
+                    <p class="OtherBenefits floatRight textAlignCenter" id="AmtOfRides">
+                        <i class="fa fa-compass OtherBenefitsImages textAlignCenter"></i>
+                        <br>
+                        879
+                        <br>
+                        <span class="OtherBenefitsFooter">
+                            Rides Taken
+                        </span>
+                    </p>
+                </div>
+                <div class="OtherBenefitsDivision">
+                    
+                    <p class="OtherBenefits floatRight textAlignCenter" id="Miles">
+                        <i class="fa fa-clock-o OtherBenefitsImages textAlignCenter"></i>
+                        <br>
+                        20,197
+                        <br>
+                        <span class="OtherBenefitsFooter">
+                            Miles Driven
+                        </span>
+                    </p>
+                </div>
+            
+                
+                
+        </div>
+        <div class="Benefits" id="Pricing">
             <p class="BenefitsTitle">Pricing</p>
             <div class="borderbottom"></div> 
             <br><br>
             <div class="OneSplitThree floatLeft textAlignRight">
                 <ul id="ulshift1" class="Price textAlignCenter">
-                    <li>Basic</li>
-                    <li class="BBottom"><p class="PricingHeader"> $3/<sub>mile</sub></p></li>
-                    <li class="BBottom">Free Wifi</li>
-                    <li class="BBottom">Free Water</li>
-                    <li class="BBottom">Sedan Only</li>
-                    <li class="BBottom">Bluetooth</li>
-                    <li><a id="SignUpPrice" href="#">SIGN UP</a></li>
+                    <li class="PriceHeader">Basic</li>
+                    <li class="PricingHeader">$3/<sub>mile</sub></li>
+                    <li class="BBottom twentyFont">Free WiFi</li>
+                    <li class="BBottom twentyFont">Free Water</li>
+                    <li class="BBottom twentyFont">Sedan Only</li>
+                    <li class="BBottom twentyFont">Bluetooth</li>
+                    <li><a id="SignUpPrice" href="#">Sign Up</a></li>
                 </ul>
             </div>
             <div class="TwoSplitThree floatLeft textAlignCenter">
                 <ul id="ulshift2" class="Price">
-                    <li>Premium</li>
-                    <li class="BBottom nopadding"><p class="PricingHeader"> $6/<sub>mile</sub></p></li>
-                    <li class="BBottom">Basic Benefits</li>
-                    <li class="BBottom">Bonuses miles</li>
-                    <li class="BBottom">Luxury Car</li>
-                    <li class="BBottom">Entertainment</li>
-                    <li><a id="SignUpPrice" href="#">SIGN UP</a></li>
+                    <li class="PriceHeader">Premium</li>
+                    <li class="nopadding PricingHeader"> $6/<sub>mile</sub></li>
+                    <li class="BBottom twentyFont">Basic Benefits</li>
+                    <li class="BBottom twentyFont">Bonuses miles</li>
+                    <li class="BBottom twentyFont">Luxury Car</li>
+                    <li class="BBottom twentyFont">Entertainment</li>
+                    <li><a id="SignUpPrice" href="#">Sign Up</a></li>
                 </ul>
             </div>
             <div class="OneSplitThree floatLeft textAlignLeft">
                 <ul class="Price textAlignCenter">
-                    <li>Executive</li>
-                    <li class="BBottom"><p class="PricingHeader"> $9/<sub>mile</sub></p></li>
-                    <li class="BBottom">Premium Benefits</li>
-                    <li class="BBottom">No Payment Fees</li>
-                    <li class="BBottom">Exotic Car</li>
-                    <li class="BBottom">Reclining Seats</li>
-                    <li><a id="SignUpPrice" href="#">SIGN UP</a></li>
+                    <li class="PriceHeader">Executive</li>
+                    <li class="PricingHeader">$9/<sub>mile</sub></li>
+                    <li class="BBottom twentyFont">Premium Benefits</li>
+                    <li class="BBottom twentyFont">No Payment Fees</li>
+                    <li class="BBottom twentyFont">Exotic Car</li>
+                    <li class="BBottom twentyFont">Reclining Seats</li>
+                    <li><a id="SignUpPrice" href="#">Sign Up</a></li>
                 </ul>
             </div>
-        </div>
-                   
+            <br>
+        </div>          
         <br>
-        <div id="people">
+        <div id="team" class="container">
             <p class="BenefitsTitle">Team</p>
-            <div class="borderbottom">
-            </div> 
+            <div class="borderbottom"></div> 
             <br><br>
             <div class="FiveSplitOne floatLeft">&nbsp;</div>
             <div class="textAlignCenter FiveSplitTwo floatLeft">
@@ -497,5 +834,69 @@
         </div>
         <br>
         
+        <div id="Driving" class="container textAlignCenter">
+            <p id="RequestForm" class="textAlignCenter">Request a Ride Today!</p>
+            <div id="BorderBottomRequest"></div>
+            <form>
+                <div class="displayInline requestRide">
+                    <div class="driveSplitOne textAlignRight floatLeft displayInline">
+                        <label class="Labels">Name:</label>
+                    </div>
+                    <div class="driveSplitTwo floatLeft textAlignLeft">
+                        <input type="text" id="Name" class="textbox textAlignLeft" name="Name">  
+                    </div>
+                </div>
+                <div class="displayTable">&nbsp;</div>
+                <div class="displayInline requestRide">    
+                    <div class="driveSplitOne textAlignRight floatLeft">
+                        <label class="Labels">Email:</label>
+                    </div>
+                    <div class="driveSplitTwo floatLeft textAlignLeft">
+                        <input type="text" id="Email" class="textbox textAlignLeft " name="Email"> 
+                    </div>    
+                </div>
+                <div class="displayInline requestRide">
+                    <div class="driveSplitOne textAlignRight  floatLeft">
+                        <label class="Labels">Phone Number:</label>
+                    </div>
+                    <div class="driveSplitTwo floatLeft textAlignLeft">
+                        <input type="text" id="PhoneNumber" class="textbox textAlignLeft " name="Name">  
+                    </div> 
+                </div>
+                <div class="displayInline requestRide">
+                    <div class="driveSplitOne textAlignRight  floatLeft">
+                        &nbsp;
+                    </div>
+                    <div class="driveSplitTwo floatLeft">
+                        <input type="Submit" id="Submit" class="floatLeft" name="Submit">
+                    </div> 
+                </div>
+            </form>           
+
+        </div>
+        <div id="BottomBar">
+            <div id="BottomBarTop" class="displayInlineBlock">
+                <div id="BottomBarLeft" class="displayInlineBlock floatLeft">
+                    <ul>   
+                     <li><a href="#one">How it works</a></li>
+                     <li><a href="#Benefits">Benefits</a></li>
+                     <li><a href="#Pricing">Pricing</a></li>
+                     <li><a href="#team">Team</a></li>
+                     <li><a href="#RequestForm">Request</a></li>  
+                   </ul> 
+                </div>
+                <div id="BottomBarLinks" class="displayInlineBlock floatRight">
+                    <a href="www.facebook.com" class="fa fa-facebook"></a>
+                    <a href="www.twitter.com" class="fa fa-twitter"></a>
+                    <a class="fa fa-google-plus"></a>
+                    <a class="fa fa-linkedin"></a>
+                </div>
+            </div>
+            <div id="Copyright" class="textAlignCenter">
+                <div class="displayInlineBlock">
+                    Copyright &copy; by Zenith Prep Academy. All rights reserved.
+                </div>
+            </div>
+        </div>
     </body>
 </html>
